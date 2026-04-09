@@ -11,9 +11,8 @@ collections:
     folder: "events"
     create: true
     format: "json"
-    slug: "{{slug}}"
+    extension: "json"
     fields:
       - { label: "Titolo", name: "title", widget: "string" }
       - { label: "Data", name: "date", widget: "datetime" }
       - { label: "Descrizione", name: "description", widget: "text" }
-      - { label: "Immagine", name: "image", widget: "image" }
