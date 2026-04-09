@@ -56,3 +56,22 @@ document.getElementById("scrollButton")?.addEventListener("click", () => {
 
 // carica eventi
 loadEvents();
+
+// 🧬 genera DNA dinamici
+function createDNA() {
+  const container = document.querySelector(".dna-background");
+
+  for (let i = 0; i < 40; i++) {
+    const dna = document.createElement("div");
+    dna.classList.add("dna");
+    dna.innerText = "🧬";
+
+    dna.style.left = Math.random() * 100 + "vw";
+    dna.style.animationDuration = (5 + Math.random() * 10) + "s";
+    dna.style.fontSize = (20 + Math.random() * 40) + "px";
+
+    container.appendChild(dna);
+  }
+}
+
+createDNA();
