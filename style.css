@@ -72,9 +72,18 @@ button:hover {
   margin-bottom: 40px;
 }
 
+
 .event-card {
   background: #111;
   padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0,255,200,0.2);
+}
+
+.event-img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
   margin-bottom: 10px;
-  border-left: 3px solid #00ffff;
 }

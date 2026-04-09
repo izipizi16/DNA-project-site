@@ -30,7 +30,16 @@ function displayEvents(events) {
     const div = document.createElement("div");
     div.classList.add("event");
 
+    // 🔥 costruisce URL immagine
+    let imageHTML = "";
+    if (event.image) {
+      const imageUrl = `https://raw.githubusercontent.com/izipizi16/DNA-project-site/main/images/${event.image}`;
+
+      imageHTML = `<img src="${imageUrl}" alt="${event.title}" class="event-img">`;
+    }
+
     div.innerHTML = `
+      ${imageHTML}
       <h3>${event.title}</h3>
       <p>${event.date}</p>
       <p>${event.description}</p>
