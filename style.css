@@ -103,6 +103,13 @@ button:hover {
   margin-bottom: 40px;
 }
 
+.event-date {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  letter-spacing: 1px;
+}
+
 
 .event-card {
   background: #111;
@@ -117,4 +124,5 @@ button:hover {
   max-width: 300px;
   border-radius: 10px;
   margin-bottom: 10px;
+
 }

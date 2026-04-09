@@ -20,6 +20,22 @@ async function loadEvents() {
     console.error("Errore caricamento eventi:", error);
   }
 }
+function formatDate(dateString) {
+  const date = new Date(dateString);
+
+  const options = {
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+  };
+
+  const formattedDate = date.toLocaleDateString("it-IT", options);
+
+  const hours = date.getHours().toString().padStart(2, "0");
+  const minutes = date.getMinutes().toString().padStart(2, "0");
+
+  return `${formattedDate} • ${hours}:${minutes}`;
+}
 
 function displayEvents(events) {
   const upcoming = document.getElementById("upcomingEvents");
@@ -43,7 +59,7 @@ function displayEvents(events) {
     div.innerHTML = `
       ${imageHTML}
       <h3>${event.title}</h3>
-      <p>${event.date}</p>
+      <p class="event-date">${formatDate(event.date)}</p>
       <p>${event.description}</p>
     `;
 
