@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: white;
+}
+
+.hero {
+  text-align: center;
+  padding: 150px 20px;
+}
+
+.highlight {
+  color: violet;
+  font-size: 3em;
+}
+
+.subtitle {
+  font-size: 1.5em;
+}
+
+.slogan {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.events-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.event-card {
+  background: #111;
+  border: 1px solid violet;
+  padding: 15px;
+  width: 250px;
+  border-radius: 10px;
+}
+
+.event-card img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.event-card .gallery img {
+  margin-top: 5px;
+  max-width: 45%;
+}
