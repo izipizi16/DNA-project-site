@@ -71,7 +71,7 @@ body {
 }
 
 .subtitle {
-  front-size: 1rem;
+  font-size: 1rem;
   color: #c084fc;
   text-shadow: 0 0 10px #a855f7;
 }
