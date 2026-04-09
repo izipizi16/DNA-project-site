@@ -1,36 +1,45 @@
 async function loadEvents() {
-  const container = document.getElementById("events");
+  const upcomingContainer = document.getElementById('upcomingEvents');
+  const pastContainer = document.getElementById('pastEvents');
 
-  try {
-    const res = await fetch("/events/");
-    const text = await res.text();
+  const now = new Date();
 
-    // lista file (hack semplice)
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(text, "text/html");
-    const links = [...doc.querySelectorAll("a")];
+  // 👉 AGGIORNA QUI quando crei nuovi eventi
+  const files = [
+    '/events/testtttttt.json'
+  ];
 
-    const files = links
-      .map(a => a.getAttribute("href"))
-      .filter(href => href.endsWith(".json"));
+  for (let file of files) {
+    try {
+      const res = await fetch(file);
+      const event = await res.json();
 
-    for (let file of files) {
-      const eventRes = await fetch(file);
-      const event = await eventRes.json();
+      const div = document.createElement('div');
+      div.classList.add('event-card');
 
-      const div = document.createElement("div");
       div.innerHTML = `
-        <h2>${event.title}</h2>
-        <p>${new Date(event.date).toLocaleDateString()}</p>
-        <img src="${event.image}" width="200"/>
+        <h3>${event.title}</h3>
+        <p>${new Date(event.date).toLocaleString()}</p>
         <p>${event.description}</p>
       `;
 
-      container.appendChild(div);
+      const eventDate = new Date(event.date);
+
+      if (eventDate >= now) {
+        upcomingContainer.appendChild(div);
+      } else {
+        pastContainer.appendChild(div);
+      }
+
+    } catch (err) {
+      console.error(err);
     }
-  } catch (err) {
-    console.error(err);
   }
 }
 
 loadEvents();
+
+// scroll bottone
+document.getElementById("scrollButton").addEventListener("click", () => {
+  document.getElementById("events").scrollIntoView({ behavior: "smooth" });
+});

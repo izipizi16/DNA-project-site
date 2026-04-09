@@ -5,20 +5,28 @@
   <title>DNA Project</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+
+  <!-- SFONDO ANIMATO -->
+  <div class="dna-bg"></div>
 
   <!-- HERO -->
   <section class="hero">
-    <h1 class="highlight">DNA PROJECT 🧬💣</h1>
-    <p class="subtitle highlight">Dance N Adapt</p>
+    <h1>DNA Project</h1>
+    <p class="subtitle">Dance N Adapt</p>
     <p class="slogan">Eventi. Energia. Evoluzione.</p>
-    <button id="scrollButton">Scopri Evento</button>
+    <button id="scrollButton">Scopri Eventi</button>
   </section>
 
   <!-- EVENTI -->
-<section id="events">
-  <h2>Eventi</h2>
-  <div id="events"></div>
-</section>
- 
+  <section id="events">
+    <h2>Eventi Futuri</h2>
+    <div id="upcomingEvents" class="events-list"></div>
+
+    <h2>Eventi Passati</h2>
+    <div id="pastEvents" class="events-list"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
