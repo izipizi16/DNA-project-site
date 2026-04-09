@@ -126,3 +126,33 @@ button:hover {
   margin-bottom: 10px;
 
 }
+
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.social-links .btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.whatsapp {
+  background: #25D366;
+  color: white;
+}
+
+.instagram {
+  background: #E1306C;
+  color: white;
+}
+
+.social-links .btn:hover {
+  transform: scale(1.05);
+}
