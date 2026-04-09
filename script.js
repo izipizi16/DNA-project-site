@@ -22,21 +22,23 @@ async function loadEvents() {
 }
 
 function displayEvents(events) {
-  const container = document.getElementById("upcomingEvents");
+  const upcoming = document.getElementById("upcomingEvents");
+  const past = document.getElementById("pastEvents");
 
-  container.innerHTML = "";
+  upcoming.innerHTML = "";
+  past.innerHTML = "";
+
+  const now = new Date();
 
   events.forEach(event => {
     const div = document.createElement("div");
     div.classList.add("event");
 
-    // 🔥 costruisce URL immagine
     let imageHTML = "";
-if (event.image) {
-  const imageUrl = "https://raw.githubusercontent.com/izipizi16/DNA-project-site/main" + event.image;
-
-  imageHTML = `<img src="${imageUrl}" alt="${event.title}" class="event-img">`;
-}
+    if (event.image) {
+      const imageUrl = "https://raw.githubusercontent.com/izipizi16/DNA-project-site/main/" + event.image;
+      imageHTML = `<img src="${imageUrl}" class="event-img">`;
+    }
 
     div.innerHTML = `
       ${imageHTML}
@@ -44,20 +46,26 @@ if (event.image) {
       <p>${event.date}</p>
       <p>${event.description}</p>
     `;
+
     if (event.galleryLink) {
-  const link = document.createElement("a");
-  link.href = event.galleryLink;
-  link.target = "_blank";
-  link.innerText = "Guarda tutte le foto 📸";
+      const link = document.createElement("a");
+      link.href = event.galleryLink;
+      link.target = "_blank";
+      link.innerText = "Guarda tutte le foto 📸";
+      link.style.color = "#a855f7";
+      link.style.display = "block";
+      link.style.marginTop = "10px";
 
-  link.style.display = "inline-block";
-  link.style.marginTop = "10px";
-  link.style.color = "#a855f7";
+      div.appendChild(link);
+    }
 
-  div.appendChild(link);
-}
+    const eventDate = new Date(event.date);
 
-    container.appendChild(div);
+    if (eventDate >= now) {
+      upcoming.appendChild(div);
+    } else {
+      past.appendChild(div);
+    }
   });
 }
 
