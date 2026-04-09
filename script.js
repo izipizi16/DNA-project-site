@@ -1,45 +1,49 @@
 async function loadEvents() {
-  const upcomingContainer = document.getElementById('upcomingEvents');
-  const pastContainer = document.getElementById('pastEvents');
+  try {
+    // carica lista file dalla cartella events (trucco con GitHub raw API)
+    const response = await fetch("https://api.github.com/repos/izipizi16/DNA-project-site/contents/events");
+    const files = await response.json();
 
-  const now = new Date();
+    const events = [];
 
-  // 👉 AGGIORNA QUI quando crei nuovi eventi
-  const files = [
-    '/events/testtttttt.json'
-  ];
-
-  for (let file of files) {
-    try {
-      const res = await fetch(file);
-      const event = await res.json();
-
-      const div = document.createElement('div');
-      div.classList.add('event-card');
-
-      div.innerHTML = `
-        <h3>${event.title}</h3>
-        <p>${new Date(event.date).toLocaleString()}</p>
-        <p>${event.description}</p>
-      `;
-
-      const eventDate = new Date(event.date);
-
-      if (eventDate >= now) {
-        upcomingContainer.appendChild(div);
-      } else {
-        pastContainer.appendChild(div);
+    for (let file of files) {
+      if (file.name.endsWith(".json")) {
+        const res = await fetch(file.download_url);
+        const data = await res.json();
+        events.push(data);
       }
-
-    } catch (err) {
-      console.error(err);
     }
+
+    displayEvents(events);
+
+  } catch (error) {
+    console.error("Errore caricamento eventi:", error);
   }
 }
 
-loadEvents();
+function displayEvents(events) {
+  const container = document.getElementById("upcomingEvents");
+
+  container.innerHTML = "";
+
+  events.forEach(event => {
+    const div = document.createElement("div");
+    div.classList.add("event");
+
+    div.innerHTML = `
+      <h3>${event.title}</h3>
+      <p>${event.date}</p>
+      <p>${event.description}</p>
+    `;
+
+    container.appendChild(div);
+  });
+}
 
 // scroll bottone
-document.getElementById("scrollButton").addEventListener("click", () => {
+document.getElementById("scrollButton")?.addEventListener("click", () => {
   document.getElementById("events").scrollIntoView({ behavior: "smooth" });
 });
+
+// carica eventi
+loadEvents();
