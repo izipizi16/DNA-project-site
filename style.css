@@ -104,7 +104,12 @@ button:hover {
 }
 
 .events-list {
+  width: 100%;
   margin-bottom: 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .event-date {
@@ -120,6 +125,13 @@ button:hover {
   padding: 20px;
   border-radius: 12px;
   margin-bottom: 20px;
+
+  width: 100%;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  
   box-shadow: 0 0 10px rgba(0,255,200,0.2);
 }
 
