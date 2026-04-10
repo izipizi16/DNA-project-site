@@ -95,12 +95,14 @@ button:hover {
 
 /* EVENTI */
 #events {
-  padding: 50px 20 px;
+  padding: 50px 20px;
   position: relative;
   z-index: 1;
 
   max-width: 600px;
   margin: 0 auto;
+
+  scroll-margin-top: 120px;
 }
 
 .events-list {

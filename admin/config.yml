@@ -18,4 +18,4 @@ collections:
       - { label: "Data", name: "date", widget: "datetime" }
       - { label: "Descrizione", name: "description", widget: "text" }
       - { label: "Immagine", name: "image", widget: "image" }
-      - { label: "Link Foto", name: "galleryLink", widget: "string" }
+      - { label: "Link Foto", name: "galleryLink", widget: "string", required: false }
