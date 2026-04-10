@@ -63,17 +63,25 @@ function displayEvents(events) {
       <p>${event.description}</p>
     `;
 
+    
     if (event.galleryLink) {
-      const link = document.createElement("a");
-      link.href = event.galleryLink;
-      link.target = "_blank";
-      link.innerText = "Guarda tutte le foto 📸";
-      link.style.color = "#a855f7";
-      link.style.display = "block";
-      link.style.marginTop = "10px";
+    const link = document.createElement("a");
+    link.href = event.galleryLink;
+    link.target = "_blank";
+    link.innerText = "View Gallery 📸";
 
-      div.appendChild(link);
-    }
+    link.style.display = "inline-block";
+    link.style.marginTop = "15px";
+    link.style.padding = "10px 20px";
+    link.style.borderRadius = "8px";
+    link.style.textDecoration = "none";
+    link.style.fontWeight = "500";
+
+    link.style.background = "#a855f7";
+    link.style.color = "black";
+
+    div.appendChild(link);
+}
 
     const eventDate = new Date(event.date);
 
@@ -111,3 +119,9 @@ function createDNA() {
 }
 
 createDNA();
+
+document.getElementById("scrollButton").addEventListener("click", () => {
+  document.getElementById("events").scrollIntoView({
+    behavior: "smooth"
+  });
+});

@@ -83,6 +83,7 @@ body {
 button {
   padding: 12px 24px;
   background: #a855f7;
+  color: black;
   border: none;
   cursor: pointer;
   transition: 0.3s;
@@ -160,9 +161,40 @@ button:hover {
 .section-title {
   font-size: 28px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   color: white;
   text-align: center;
   letter-spacing: 1px;
   opacity: 0.9;
+
+  border-bottom: 2px solid white;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* ===== MOBILE FIX EVENTI ===== */
+@media (max-width: 768px) {
+
+  #events {
+    text-align: center;
+  }
+
+  .events-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .event-card {
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .event-img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
 }
