@@ -194,6 +194,11 @@ button:hover {
     width: 90%;
   }
 
+  .event-card h3,
+.event-card p {
+  text-align: center;
+}
+
   .event-img {
     display: block;
     margin: 0 auto;
