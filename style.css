@@ -307,17 +307,6 @@ button {
   padding-bottom: 8px;
 }
 
-.contacts h2::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 2px;
-  background: linear-gradient(90deg, #a855f7, #6b21a8);
-}
-
 .contact-group {
   margin-bottom: 25px;
 }
