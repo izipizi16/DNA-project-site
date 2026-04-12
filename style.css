@@ -239,7 +239,7 @@ button:hover {
   /* 🔥 HERO MOBILE BIG */
 
   .hero {
-    padding: 80px 20px;
+    padding: 60px 20px;
   }
 
 .hero h1 {
@@ -275,7 +275,7 @@ button {
 }
 
 #events {
-  min-height: 100vh;
+  padding: 40px 20px;
 }
 
 .event-description {
