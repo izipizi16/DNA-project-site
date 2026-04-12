@@ -241,8 +241,8 @@ button:hover {
   /* 🔥 HERO MOBILE BIG */
 
   .hero {
-    padding: 60px 20px;
-    min-height: auto;
+    padding: 60px 20px 120px;
+    min-height: 100vh;
   }
 
 .hero h1 {
@@ -285,7 +285,7 @@ button {
 
 #events {
   padding: 0px 20px 20px;
-  margin-top: -80px;
+  margin-top: 0;
 }
 
 .event-description {
