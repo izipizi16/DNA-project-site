@@ -189,7 +189,8 @@ button:hover {
 .section-title {
   font-size: 28px;
   font-weight: 600;
-  margin-bottom: 25px;
+  margin-top: 10px;
+  margin-bottom: 15px;
   color: white;
   text-align: center;
   letter-spacing: 1px;
