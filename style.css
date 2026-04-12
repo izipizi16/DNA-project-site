@@ -276,8 +276,6 @@ button {
   margin: 0;
 }
 
-}
-
 .hero {
   min-height: 100vh;
   display: flex;
@@ -297,3 +295,7 @@ button {
 #events .section-title {
   transform: translateY(-5px);
 }
+
+}
+
+
