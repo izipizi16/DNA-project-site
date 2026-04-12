@@ -284,16 +284,12 @@ button {
 }
 
 #events {
-  padding: 0px 20px 30px;
-  margin-top: -40px;
+  padding: 0px 20px 20px;
+  margin-top: -80px;
 }
 
 .event-description {
   white-space: pre-line;
-}
-
-#events .section-title {
-  transform: translateY(-5px);
 }
 
 }
