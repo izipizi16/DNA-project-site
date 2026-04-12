@@ -190,7 +190,7 @@ button:hover {
   font-size: 28px;
   font-weight: 600;
   margin-top: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   color: white;
   text-align: center;
   letter-spacing: 1px;
@@ -269,14 +269,14 @@ button {
 }
 
 .hero {
-  min-height: 85vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 #events {
-  padding: 20px 20px 40px;
+  padding: 10px 20px 30px;
 }
 
 .event-description {
@@ -284,5 +284,5 @@ button {
 }
 
 #events .section-title {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
