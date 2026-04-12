@@ -237,21 +237,31 @@ button:hover {
   }
 
   /* 🔥 HERO MOBILE BIG */
+
+  .hero {
+    padding: 140px 20px;
+  }
+
 .hero h1 {
-  font-size: 3.5rem;
+  font-size: 5.5rem;
+  line-height: 1.1;
 }
 
 .subtitle {
-  font-size: 1.6rem;
+  font-size: 2.5rem;
+  margin-top: 10px;
 }
 
 .hero p {
-  font-size: 1.3rem;
+  font-size: 1.8rem;
+  margin-top: 15px;
 }
 
 button {
-  font-size: 1.4rem;
-  padding: 20px 24px;
+  font-size: 1.8rem;
+  padding: 24px 30px;
+  width: 100%;
+  max-width: 350px;
 }
 
 }
