@@ -140,6 +140,10 @@ button:hover {
 .event-img {
   width: 100%;
   max-width: 300px;
+
+  display: block;
+  margin: 0 auto;
+
   border-radius: 10px;
   margin-bottom: 10px;
 
@@ -236,4 +240,8 @@ button:hover {
 
 #events {
   min-height: 100vh;
+}
+
+.event-description {
+  white-space: pre-line;
 }

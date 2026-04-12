@@ -60,7 +60,7 @@ function displayEvents(events) {
       ${imageHTML}
       <h3>${event.title}</h3>
       <p class="event-date">${formatDate(event.date)}</p>
-      <p>${event.description}</p>
+      <p class="event-description">${event.description}</p>
     `;
 
     
