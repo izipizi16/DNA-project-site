@@ -294,4 +294,28 @@ button {
 
 }
 
+.contacts {
+  text-align: center;
+  padding: 40px 20px;
+  opacity: 0.8;
+}
+
+.contacts h3 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.contacts a {
+  display: block;
+  margin: 8px 0;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contacts a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
 
