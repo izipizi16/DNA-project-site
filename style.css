@@ -300,6 +300,7 @@ button {
 }
 
 .contacts h2 {
+  font-size: 1.4rem;
   margin-bottom: 25px;
   opacity: 0.9;
   position: relative;
