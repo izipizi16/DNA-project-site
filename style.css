@@ -301,7 +301,21 @@ button {
 
 .contacts h2 {
   margin-bottom: 25px;
-  opacity: 0.8;
+  opacity: 0.9;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.contacts h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #a855f7, #6b21a8);
 }
 
 .contact-group {
@@ -331,6 +345,8 @@ button {
   transform: scale(1.05);
   box-shadow: 0 0 12px rgba(168, 85, 247, 0.6);
 }
+
+
 
 /* WhatsApp variante */
 .contact-btn.whatsapp {
