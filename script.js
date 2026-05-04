@@ -46,6 +46,8 @@ function displayEvents(events) {
 
   const now = new Date();
 
+  events.sort((a, b) => new Date(b.date) - new Date(a.date));
+
   events.forEach(event => {
     const div = document.createElement("div");
     div.classList.add("event");
